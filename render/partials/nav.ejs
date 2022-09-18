@@ -1,0 +1,97 @@
+<nav class="navbar navbar-dark navbar-expand-lg">
+    <div class="container-fluid">
+        <a class="navbar-brand ms-lg-5" href="#"><image class="logo img-fluid p-2" src="/img/APDC cut white.png"></image></a>
+        <button class="navbar-toggler me-lg-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#navContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="navContent">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><image class="logo me-auto p-2" src="/img/APDC cut white.png"></image></h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end text-lg-center flex-grow-1 gap-2 me-5 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/">HOME</a>
+                    </li>
+
+                    
+
+                    <li            
+                        <% if (title === 'ABOUT US') { %>
+                            class="nav-item navActive"
+                            <%} else { %>
+                            class="nav-item"
+                            <% } %> >
+                        <a class="nav-link" href="/about_us">ABOUT US</a>
+                    </li>
+
+
+
+                    <li            
+                        <% if (title === 'BASIC SERVICES' || title === 'SPECIALIZED SERVICES') { %>
+                            class="nav-item dropdown navActive"
+                            <%} else { %>
+                            class="nav-item dropdown"
+                            <% } %> >
+                        <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">
+                            SERVICES
+                        </a>
+                        <ul class="dropdown-menu p-4">
+                            <li            
+                                <% if (title === 'BASIC SERVICES') { %>
+                                    class="dropdown-item navActive"
+                                    <%} else { %>
+                                    class="dropdown-item"
+                                    <% } %> >
+                                <a class="nav-link" href="/services_basic">Basic Dental Services</a>
+                            </li>
+
+                            <li            
+                                <% if (title === 'SPECIALIZED SERVICES') { %>
+                                    class="dropdown-item navActive"
+                                    <%} else { %>
+                                    class="dropdown-item"
+                                    <% } %> >
+                                <a class="nav-link" href="/services_specialized">Specialized Services</a>
+                            </li>
+                        </ul>
+                   </li>
+
+
+
+                    <li            
+                        <% if (title === 'ONLINE APPOINTMENT') { %>
+                            class="nav-item navActive"
+                            <%} else { %>
+                            class="nav-item"
+                            <% } %> >
+                        <a class="nav-link" href="/appointment">ONLINE APPOINTMENT</a>
+                    </li>
+
+
+
+                    <li            
+                        <% if (title === 'CAREERS') { %>
+                            class="nav-item navActive"
+                            <%} else { %>
+                            class="nav-item"
+                            <% } %> >
+                        <a class="nav-link" href="/careers">CAREERS</a>
+                    </li>
+
+
+
+                    <li            
+                        <% if (title === 'CONTACT US') { %>
+                            class="nav-item navActive"
+                            <%} else { %>
+                            class="nav-item"
+                            <% } %> >
+                        <a class="nav-link" href="/contact_us">CONTACT US</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+  </nav>

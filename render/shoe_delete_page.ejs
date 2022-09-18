@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./partials/head.ejs")%>
+<body class="d-flex flex-column min-vh-100">
+<%- include("./partials/nav.ejs")%>
+
+copied from main, this is delete page. iwant to put a red "X" on a model object- when pressed, that item will be deleted.
+
+<div class="d-flex gap-2 justify-content-center">
+<%if(shoe.length > 0){%>
+    <%for(i = 0; i < shoe.length; i++){%>
+        <div class="border">
+            <form method="POST" action="/shoe/<%=shoe[i].id%>?_method=DELETE" class="text-end">
+                <button class="btn" type="submit">
+                    <i class="fa-solid fa-delete-left" style="font-size:30px;color:red"></i>
+                </button>
+            </form> 
+            <a href="/shoe/<%=shoe[i].id%>" class="text-decoration-none">
+                <div class="p-3 border border-secondary">
+                    <div class="border-bottom h6"><%=shoe[i].brand%></div>
+                    <div>Founded: <span><%=shoe[i].founded%></span></div>
+                    <div>Active: <span><%=shoe[i].isActivelyProduced%></span></div>
+                </div>
+            </a>
+        </div>
+    <%}%>  
+<%} else {%>
+        <h1>Nothing to Delete</h1>
+        <button><a href="/shoe/post_page">Click</a></button> to add a shoe brand in your database
+<%}%>     
+</div>
+
+
+<%- include("./partials/footer.ejs")%>
+</body>
+</html>

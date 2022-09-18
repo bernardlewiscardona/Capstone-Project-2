@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./partials/head.ejs")%>
+<body class="d-flex flex-column min-vh-100">
+<%- include("./partials/nav.ejs")%>
+
+This is main with an anchor to view the item
+
+<div class="d-flex gap-2 justify-content-center">
+<%if(shoe.length > 0){%>
+    <%for(i =0; i < shoe.length; i++){%>
+        <a href="/shoe/<%=shoe[i].id%>" class="find_item text-decoration-none">
+            <div class="p-3 border border-secondary">
+                <div class="border-bottom h6"><%=shoe[i].brand%></div>
+                <div>Founded: <span><%=shoe[i].founded%></span></div>
+                <div>Active: <span><%=shoe[i].isActivelyProduced%></span></div>
+            </div>
+        </a>
+    <%}%>  
+<%} else {%>
+        <h1>Nothing to Read</h1>
+        <button><a href="/shoe/post_page">Click</a></button> to add a shoe brand in your database
+<%}%>     
+</div>
+
+
+<%- include("./partials/footer.ejs")%>
+</body>
+</html>

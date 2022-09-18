@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./partials/head.ejs")%>
+
+
+<body class="d-flex flex-column min-vh-100">
+
+
+<%- include("./partials/nav.ejs")%>
+
+
+<div id="banner_careers" class="text-center">
+    <p class="banner-center display-2">CAREERS</p>
+</div>
+
+<div class="d-flex flex-column justify-content-center align-items-center p-md-4">
+    <div class="booking p-4">
+        <form action="">
+            <div class="text-center">
+                <p class="display-4 fw-bold">APPLY NOW</p>
+            </div>
+
+            <div class="d-sm-flex justify-content-sm-between">
+                <div class="entryHalved">
+                    <label for="firstName">First Name*</label>
+                    <input class="iField" type="text" name="firstName" id="firstName"/>
+                </div>
+
+                <div class="entryHalved">
+                    <label for="lastName">Last Name*</label>
+                    <input class="iField" type="text" name="lastName" id="lastName"/>
+                </div>
+            </div>
+
+            <div class="d-sm-flex justify-content-sm-between">
+                <div class="entryHalved">
+                    <label for="phone">Phone Number*</label>
+                    <input class="iField" type="tel" name="phone" id="phone"/>
+                </div>
+
+                <div class="entryHalved">
+                    <label for="email">E-mail*</label>
+                    <input class="iField" type="email" name="email" id="email"/>
+                </div>
+            </div>
+
+            <div class="d-sm-flex justify-content-sm-between">
+                <div class="entryHalved">
+                    <label for="preferredDate">Preferred Appointment Date*</label>
+                    <input class="iField" type="date" name="preferredDate" id="preferredDate"/>
+                </div>
+
+                <div class="entryHalved">
+                    <label for="preferredTime">Preferred Appointment Time*</label>
+                    <input class="iField" type="time" min="10:00" max="18:00" name="preferredTime" id="preferredTime"/>
+                </div>
+            </div>
+
+            <label for="serviceRequired">Service Required*</label>
+            <select class="iField" name="serviceRequired" id="serviceRequired">
+                <option value="null">---</option>
+                <option value="cleaning">Cleaning</option>
+                <option value="check-up">Check-up</option>
+                <option value="cosmetics">Cosmetics</option>
+                <option value="filings">Filings</option>
+                <option value="surgery">Surgery</option>
+                <option value="orthodontics">Orthodontics</option>
+                <option value="others">Others</option>
+            </select>
+
+            <p class="text-dark fw-bold">Current Patient?
+            <input type="radio" id="askCurrent1" name="askCurrent" value="YES"/>
+            <label for="askCurrent1">YES</label>
+
+            <input type="radio" id="askCurrent2" name="askCurrent" value="NO">
+            <label for="askCurrent2">NO</label>
+            </p>
+
+            <label for="ifCurrentPatient">If Yes, Name of Attending Dentist (may be left blank)</label>
+            <input class="iField" type="text" name="ifCurrentPatient" id="ifCurrentPatient"/>
+
+            <label for="comments">Comments</label>
+            <textarea class="iFieldArea" id="comments" name="comments" id="comments" rows="4" cols="50"></textarea>
+
+            <label for="file">Upload Resume</label>
+            <input type="file" id="file" name="file" accept=".pdf"/>
+
+            <div class="text-center"><input type="submit" value="SUBMIT" class="submitBTN"></div>
+        </form>
+    </div>
+</div>
+
+
+<%- include("./partials/footer.ejs")%>
+</body>
+</html>

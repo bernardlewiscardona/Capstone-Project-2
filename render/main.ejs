@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./partials/head.ejs")%>
+<body class="d-flex flex-column min-vh-100">
+<%- include("./partials/nav.ejs")%>
+
+This is main. It displays model objects. No, you cant "view" them here. see c.r.u.d.
+
+<div class="d-flex gap-2 justify-content-center">
+<%if(shoe.length > 0){%>
+    <%shoe.forEach(element => {%>
+        <div class="main_item p-3 border border-secondary">
+            <div class="border-bottom"><span><%=element.brand%></span></div>
+
+            <div>Founded: <span><%=element.founded%></span></div>
+            <div>Active: <span><%=element.isActivelyProduced%></span></div>
+        </div>
+<%}) } else {%>
+        <h1>Nothing to Display</h1>
+        <button><a href="/shoe/post_page">Click</a></button> to add a shoe brand in your database
+<%}%>     
+</div>
+
+
+<%- include("./partials/footer.ejs")%>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./partials/head.ejs")%>
+<body class="d-flex flex-column min-vh-100">
+<%- include("./partials/nav.ejs")%>
+
+You found a model object
+
+<div class="d-flex gap-2 justify-content-center">
+    <div class="shoe-div p-3 border border-secondary">
+        <div class="border-bottom mb-3">Title: <span><%=shoe.brand%></span></div>
+        <div class="mb-3">Founded: <span><%=shoe.founded%></span></div>
+        <div class="mb-3">Active: <span><%=shoe.isActivelyProduced%></span></div>
+        <div class="mb-3">Created at: <span><%= shoe.createdAt %></span></div>
+        <div class="mb-3">Updated at: <span><%= shoe.updatedAt %></span></div>
+    </div>
+</div>
+
+
+<%- include("./partials/footer.ejs")%>
+</body>
+</html>
