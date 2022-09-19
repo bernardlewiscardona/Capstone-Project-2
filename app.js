@@ -1,7 +1,7 @@
 const express = require("express")
 const mongoose = require("mongoose")
 const dotEnv = require("dotenv")
-const shoeRoutes = require("./routes/shoeRoutes")
+const routes = require("./routes/shoeRoutes")
 const app = express()
 const methodOverride = require('method-override');  
 
@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-app.use("/", shoeRoutes)
+app.use("/", routes)
 
 
 //view engine
