@@ -18,17 +18,17 @@ router.get("/services_specialized", (req, res)=>{
     res.status(201).render("services_specialized", {title:"SPECIALIZED SERVICES"})
 })
 
-router.get("/appointment", (req, res)=>{
-    res.status(201).render("appointment", {title:"ONLINE APPOINTMENT"})
-})
+// router.get("/appointment", (req, res)=>{
+//     res.status(201).render("appointment", {title:"ONLINE APPOINTMENT"})
+// })
 
-router.get("/careers", (req, res)=>{
-    res.status(201).render("careers", {title:"CAREERS"})
-})
+// router.get("/careers", (req, res)=>{
+//     res.status(201).render("careers", {title:"CAREERS"})
+// })
 
-router.get("/contact_us", (req, res)=>{
-    res.status(201).render("contact_us", {title:"CONTACT US"})
-})
+// router.get("/contact_us", (req, res)=>{
+//     res.status(201).render("contact_us", {title:"CONTACT US"})
+// })
 
 
 module.exports = router;

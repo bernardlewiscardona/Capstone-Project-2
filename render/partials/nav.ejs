@@ -1,7 +1,7 @@
 <nav class="navbar navbar-dark navbar-expand-lg">
     <div class="container-fluid">
-        <a class="navbar-brand ms-lg-5" href="/"><image class="logo img-fluid p-2" src="/img/APDC cut white.png"></image></a>
-        <button class="navbar-toggler me-lg-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#navContent">
+        <a class="navbar-brand" href="/"><image class="logo img-fluid p-2" src="/img/APDC cut white.png"></image></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navContent">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="offcanvas offcanvas-start" tabindex="-1" id="navContent">
@@ -11,7 +11,7 @@
             </div>
             <div class="offcanvas-body">
 
-                <ul class="navbar-nav justify-content-end text-lg-center flex-grow-1 gap-2 me-5 pe-3">
+                <ul class="navbar-nav justify-content-end text-lg-center flex-grow-1 gap-5">
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="/">HOME</a>
                     </li>
@@ -58,17 +58,6 @@
                             </li>
                         </ul>
                    </li>
-
-
-
-                    <li            
-                        <% if (title === 'ONLINE APPOINTMENT') { %>
-                            class="nav-item navActive"
-                            <%} else { %>
-                            class="nav-item"
-                            <% } %> >
-                        <a class="nav-link" href="/appointment">ONLINE APPOINTMENT</a>
-                    </li>
                 </ul>
 
             </div>

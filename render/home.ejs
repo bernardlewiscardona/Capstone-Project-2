@@ -7,32 +7,133 @@
 
 
 <div id="banner_home" class="text-left">
-   
     <%- include("./partials/nav-transparent.ejs")%>
     <p class="banner-bottom display-4">Our vision is to be the preferred 
         <br> dental clinic of all the clients we serve <br>
-        <a href="/appointment" class="bookBTN mt-3 text-decoration-none">BOOK AN APPOINTMENT</a>
+        <a href="#appointment" class="bookBTN mt-3 text-decoration-none">BOOK AN APPOINTMENT</a>
     </p>
 </div>
 
+<div style="height:15vh"></div> <!--SPACER-->
+
 <div class="text-center">
-    <p class="display-4 fw-bold">SERVICIO</p>
-    <div class="d-sm-flex">
+    <p class="display-4 fw-bold">SERVICES</p>
+    <div class="services_display">
         <div>
-            <img src="https://cdn.pixabay.com/photo/2021/09/06/08/59/dentist-6601202_960_720.png" class="img-fluid" alt=""><br>
+            <img src="/img/clean.jfif" class="img-fluid" alt=""><br>
             <span class="display-6 fw-bold">Basic Dental Services</span><br>
             <a href="/services_basic" class="viewServicesBTN">View Services</a>
         </div>
         <div>
-            <img src="https://cdn.pixabay.com/photo/2021/09/06/08/59/dentist-6601202_960_720.png" class="img-fluid" alt=""><br>
+            <img src="/img/dental-surgery.jfif" class="img-fluid" alt=""><br>
             <span class="display-6 fw-bold">Specialized Services</span><br>
             <a href="/services_specialized" class="viewServicesBTN">View Services</a>
         </div>
     </div>
 </div>
 
-<div class="">
-    <p class="display-4">SLIDESHOW</p>
+<div style="height:15vh"></div> <!--SPACER-->
+
+<div id="appointment" class="d-flex flex-column justify-content-center align-items-center p-4">
+    <div class="booking p-4">
+        <form action="">
+            <div class="text-center">
+                <p class="display-4 fw-bold">Book an Appointment</p>
+            </div>
+
+            <div class="d-sm-flex justify-content-sm-between">
+                <div class="entryHalved">
+                    <label for="firstName">First Name*</label>
+                    <input class="iField" type="text" name="firstName" id="firstName"/>
+                </div>
+
+                <div class="entryHalved">
+                    <label for="lastName">Last Name*</label>
+                    <input class="iField" type="text" name="lastName" id="lastName"/>
+                </div>
+            </div>
+
+            <div class="d-sm-flex justify-content-sm-between">
+                <div class="entryHalved">
+                    <label for="phone">Phone Number*</label>
+                    <input class="iField" type="tel" name="phone" id="phone"/>
+                </div>
+
+                <div class="entryHalved">
+                    <label for="email">E-mail*</label>
+                    <input class="iField" type="email" name="email" id="email"/>
+                </div>
+            </div>
+
+            <div class="d-sm-flex justify-content-sm-between">
+                <div class="entryHalved">
+                    <label for="preferredDate">Preferred Appointment Date*</label>
+                    <input class="iField" type="date" name="preferredDate" id="preferredDate"/>
+                </div>
+
+                <div class="entryHalved">
+                    <label for="preferredTime">Preferred Appointment Time*</label>
+                    <input class="iField" type="time" min="10:00" max="18:00" name="preferredTime" id="preferredTime"/>
+                </div>
+            </div>
+
+            <label for="serviceRequired">Service Required*</label>
+            <select class="iField" name="serviceRequired" id="serviceRequired">
+                <option value="null">---</option>
+                <option value="cleaning">Cleaning</option>
+                <option value="check-up">Check-up</option>
+                <option value="cosmetics">Cosmetics</option>
+                <option value="filings">Filings</option>
+                <option value="surgery">Surgery</option>
+                <option value="orthodontics">Orthodontics</option>
+                <option value="others">Others</option>
+            </select>
+
+            <p class="text-dark fw-bold">Current Patient?
+            <input type="radio" id="askCurrent1" name="askCurrent" value="YES"/>
+            <label for="askCurrent1">YES</label>
+
+            <input type="radio" id="askCurrent2" name="askCurrent" value="NO">
+            <label for="askCurrent2">NO</label>
+            </p>
+
+            <label for="ifCurrentPatient">If Yes, Name of Attending Dentist (may be left blank)</label>
+            <input class="iField" type="text" name="ifCurrentPatient" id="ifCurrentPatient"/>
+
+            <label for="comments">Comments</label>
+            <textarea class="iFieldArea" id="comments" name="comments" id="comments" rows="4" cols="50"></textarea>
+
+            <div class="text-center"><input type="submit" value="SUBMIT" class="submitBTN"></div>
+        </form>
+    </div>
+</div>
+
+<div style="height:15vh"></div> <!--SPACER-->
+
+
+
+<div>
+    <div class="slide">
+        <div class="slides">
+            <img src="/img/toothfillings.jfif" class="" alt="">
+            <img src="/img/toothextraction.jfif" class="" alt="">
+            <img src="/img/clean.jfif" class="" alt="">
+        </div>
+    </div>
+    <div class="slide">
+        <div class="slides">
+            <img src="/img/panoramiccephalometric.jpeg" class="" alt="">
+            <img src="/img/pediatric.jfif" class="" alt="">
+            <img src="/img/implants.png" class="" alt="">
+        </div>
+    </div>
+    <div class="slide">
+        <div class="slides">
+            <img src="/img/denture.jfif" class="img-fluid" alt="">
+            <img src="/img/orthodontic-braces.jfif" class="img-fluid" alt="">
+            <img src="/img/dental-surgery.jfif" class="img-fluid" alt="">
+        </div>
+    </div>
 </div>
 
 <div class="lookingForDentist">
@@ -40,7 +141,7 @@
         <div>
             <p><span>Looking for a Dentist?</span><br><br> Book a FREE Consultation</p>
         </div>
-        <div id="lookingForDentistBTN"><a href="/appointment" class="bookBTN">Book Now!</a></div>
+        <div id="lookingForDentistBTN"><a href="#appointment" class="bookBTN">Book Now!</a></div>
     </div>
 </div>
 

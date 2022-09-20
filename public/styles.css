@@ -20,6 +20,14 @@ nav, footer {
     border-bottom: solid #ffff !important;
 }
 
+.navbar-brand {
+    margin-left: 10vw;
+}
+
+.navbar-toggler, .navbar-nav {
+    margin-right: 10vw;
+}
+
 /* --------------  HOME transparent navbar ------------------*/
 div .navbar .navbar-nav li a {          
     color: black;
@@ -111,15 +119,21 @@ body {
     background-color: #e5f4e3;
 }
 
-
+.slides {
+    display: flex;
+}
+.slides :nth-child(n) {
+    flex: 1;
+    min-width: 0;
+    height: 320px;
+    overflow: hidden;
+}
 
 #banner_home {
     width: 100%;
     height: 740px;
-    /* background-image: url("https://cdn.pixabay.com/photo/2022/09/06/18/16/lake-7437204_960_720.jpg"); */
-    /* background-image: url("https://cdn.pixabay.com/photo/2020/02/19/09/28/doctor-4861811_960_720.jpg"); */
     background-image: url("./img/dental-equipment.jfif");
-    background-size: 100% 100%;
+    background-size: 100% 100%; 
     background-repeat: no-repeat;
     position: relative;
 }
@@ -127,7 +141,6 @@ body {
 #banner_about {
     width: 100%;
     height: 450px;
-    /* background-image: url("./img/work-with-us-palmerston-dental-surgery.jpg"); */
     /* background-image: url("https://cdn.pixabay.com/photo/2022/09/06/18/16/lake-7437204_960_720.jpg"); */
     background-image: url("https://cdn.pixabay.com/photo/2020/02/19/09/28/doctor-4861811_960_720.jpg");
     background-size: 100% 100%;
@@ -138,51 +151,25 @@ body {
 #banner_services_basic {
     width: 100%;
     height: 450px;
-    /* background-image: url("https://cdn.create.vista.com/api/media/small/221551100/stock-photo-dentist-dental-intervention-patient-dental"); */
-    /* background-image: url("https://cdn.create.vista.com/api/media/small/484131762/stock-photo-dentist-lady-in-medical-mask"); */
-    background-image: url("https://cdn.create.vista.com/api/media/small/524042632/stock-photo-dentist-checking-woman-patient-teeth");
+    background-image: url("./img/basic.jfif");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     position: relative;
 }
 
-#banner_appointment {
+#banner_services_specialized {
     width: 100%;
     height: 450px;
-    /* background-image: url("./img/planner-7102236_960_720.png"); */
-    /* background-image: url("https://cdn.pixabay.com/photo/2022/09/06/18/16/lake-7437204_960_720.jpg"); */
-    background-image: url("https://cdn.create.vista.com/api/media/small/11115274/stock-photo-calendar");
-    /* background-image: url("https://cdn.create.vista.com/api/media/small/21561743/stock-photo-business-calendar"); */
+    /* background-image: url("https://cdn.create.vista.com/api/media/small/524042632/stock-photo-dentist-checking-woman-patient-teeth"); */
+    background-image: url("./img/denture-2836230_960_720.png");
+    background-image: url("./img/cleardenta.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     position: relative;
 }
-
-
-#banner_careers {
-    width: 100%;
-    height: 450px;
-    background-image: url("https://cdn.pixabay.com/photo/2020/02/18/16/48/professor-4860068_960_720.jpg");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    position: relative;
-}
-
-#banner_contact {
-    width: 100%;
-    height: 450px;
-    background-image: url("./img/banner_contact.png");
-    /* background-image: url("https://cdn.pixabay.com/photo/2022/09/06/18/16/lake-7437204_960_720.jpg"); */
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    position: relative;
-}
-
-
 
 .banner-center {
     position: absolute;
-    /* background-color: #e5f4e3; */
     background-color: rgb(255, 255, 255, 0.7);
     padding: 10px 10px;
     border-radius: 50%;
@@ -195,7 +182,6 @@ body {
 
 .banner-bottom {
     position: absolute;
-    /* background-color: #e5f4e3; */
     padding: 0 10px;
     -webkit-text-stroke: 1px black;
     color: rgb(255, 255, 255);
@@ -206,7 +192,7 @@ body {
     /* transform: translate(-50%, -50%); */
 }
 
-p {
+p, .shouldBe003f91 {
     color:#003f91;
 }
 
@@ -226,7 +212,6 @@ label {
     width: 100%;
     height: 250px;
     margin-bottom: 30px;
-    /* font-weight: bold; */
     font-size: medium;
 }
 
@@ -235,13 +220,16 @@ input[type="radio"]{
 }
 
 
-.send, .booking, .careers{
+.booking, .aboutBodyChildReverse {
     background-color: #ffff;
 }
 
+.booking form {
+    padding: 5%;
+}
 
-.contact {
-    background-color: #5DA9E9;
+.aboutHead img, .aboutBody img{
+    width: 60%;
 }
 
 .lookingForDentist {
@@ -262,6 +250,15 @@ input[type="radio"]{
 
 .lookingForDentist span {
     font-size: 50px;
+}
+
+.basic_services_image {
+    width: 80%;
+    height: 300px;
+}
+
+.padding-y-30px {
+    padding: 30px 0;
 }
 
 .submitBTN {
@@ -326,6 +323,25 @@ input[type="radio"]{
     color: #ffff;
 }
 
+.getServiceBTN {
+    background-color: #5DA9E9;
+    color: black;
+    border-color: #5DA9E9;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 30px;
+    margin: 10px 0;
+}
+
+.getServiceBTN:hover {
+    background-color: #003f91;
+    color: #ffff;
+}
+
 ::-webkit-calendar-picker-indicator:hover {
     filter: invert(100%) sepia(100%) saturate(1854%) hue-rotate(3deg) brightness(107%) contrast(106%);
   }
@@ -341,9 +357,8 @@ input[type="radio"]{
 }
 
 .mapouter{
-    text-align:right;
     height:300px;
-    width:280px;
+    width: 80vw;
 }
 
 .gmap_canvas {
@@ -352,6 +367,7 @@ input[type="radio"]{
     height:100%;
     width:100%;
 }
+
 
 /* FOOTER start*/
 footer {
@@ -391,38 +407,19 @@ footer ul ul li {
     padding-left: 20px;
 }
 
-.rare {
+.extra {
     background-color: #062844;
 }
 
 @media (max-width: 375px) {
-    .send, .contact {
-        width: 320px;
-    }
-
     ::-webkit-calendar-picker-indicator {
         padding-left: 60%;
     }
 }
-@media (min-width: 375px) {
-    .send, .contact {
-        width: 375px;
-    }
 
+@media (min-width: 375px) {
     ::-webkit-calendar-picker-indicator {
         padding-left: 68%;
-    }
-}
-
-
-@media (min-width: 425px) {
-    .send, .contact {
-        width: 425px;
-    }
-
-    .services_basic :nth-child(n) {
-        display: flex;
-        flex: 1;
     }
 }
 
@@ -434,8 +431,22 @@ footer ul ul li {
     }
 }
 
-
 @media (min-width: 576px) {
+    .services_display {
+        display: flex;
+        gap: 2%;
+    }
+
+    .services_display div {
+        height: 100%;
+        flex: 1;
+    }
+
+    .services_display img {
+        width: 80%;
+        height: 350px;
+    }
+
     .lookingForDentistSub {
         display: flex;
         justify-content: space-around;
@@ -447,8 +458,13 @@ footer ul ul li {
         width: 45%;
     }
 
-    .booking, .careers {
-        width: 90vh;
+    .booking {
+        width: 70vw;
+    }
+
+    .basic_services_description {
+        width: 80%;
+        padding-left: 20%;
     }
 
     ::-webkit-calendar-picker-indicator {
@@ -461,17 +477,13 @@ footer ul ul li {
         display: flex;
     }
 
-    .aboutHead :nth-child(n) {
-        flex: 1;
+    .aboutHead :nth-child(1) {
+        flex: 1 0 50%;
         align-self: center;
     }
-}
 
-
-@media (min-width: 768px) {
-    .send, .contact {
-        width: 50vw;
-        height: 700px;
+    .aboutHead img {
+        height: 300px;
     }
 }
 
@@ -481,29 +493,43 @@ footer ul ul li {
     }
 }
 
+@media (max-width: 960px) {
+    .aboutBodyChildReverse p{
+        text-align: center;
+    }
+
+    .aboutBodyChildReverse div {
+        text-align: justify;
+    }
+
+    .aboutBodyChildReverse div div {
+        padding: 20px;
+    }
+}
+
 @media (min-width: 960px) {
-    .aboutBodyChild1, 
-    .aboutBodyChild2 {
+    .aboutBodyChild, 
+    .aboutBodyChildReverse {
         display: flex;
     }
 
-    .aboutBodyChild1 :nth-child(n),
-    .aboutBodyChild2 :nth-child(n) {
+    .aboutBodyChild :nth-child(n),
+    .aboutBodyChildReverse :nth-child(n) {
         flex: 1;
         align-self: center;
     }
 
-    .aboutBodyChild2 :nth-child(1) {
+    .aboutBodyChildReverse :nth-child(1) {
         order: 2; 
     }
 }
 
 @media (min-width: 1200px) {
-    .send, .contact {
-        width: 40vw;
-    }
-
     ::-webkit-calendar-picker-indicator {
         padding-left: 65%;
+    }
+
+    .booking {
+        width: 1000px;
     }
 }
